@@ -8,17 +8,15 @@
 
 chrome.runtime.onInstalled.addListener(async () => {
   chrome.storage.sync.get("name_vla", function(items) {
-    if (!chrome.runtime.error) {
       console.log(items.name_vla);
       if (items.name_vla == undefined) {
         chrome.storage.sync.set({name_vla: 0});
       }
-    }
   });
     let url = chrome.runtime.getURL("public/setting.html");
     let tab = await chrome.tabs.create({ url });
   });
 chrome.action.onClicked.addListener(async () => {
-  let url = chrome.runtime.getURL("public/setting.html");
-  let tabcl = await chrome.tabs.create({ url:url });
+    let url = chrome.runtime.getURL("public/setting.html");
+    let tabcl = await chrome.tabs.create({ url:url });
 });

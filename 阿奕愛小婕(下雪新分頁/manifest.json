@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "阿奕愛小婕(下雪新分頁",
   "description": "下雪配上浪漫的霓虹燈，讓你的新分頁更加美好。",
-  "version": "0.0.0.8",
+  "version": "0.0.0.9",
   "permissions": [
     "storage"
   ],
@@ -18,5 +18,9 @@
   "icons": {
     "128": "./assets/img/icon128.png"
   },
-  "default_locale": "zh_TW"
+  "default_locale": "zh_TW",
+  "options_ui": {
+    "page": "/public/setting.html",
+    "open_in_tab": true
+  }
 }
