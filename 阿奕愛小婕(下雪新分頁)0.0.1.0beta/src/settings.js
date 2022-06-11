@@ -6,17 +6,30 @@ let titlew= document.getElementById("title");
 let htmltitle= document.getElementById("settingw");
 let ifud= document.getElementById("ifu");
 let ente= document.getElementById("prenter");
+let nameta= document.getElementById("nametab");
+let colorta= document.getElementById("colortab");
+let goviewco= document.getElementById("goviewcolor");
+let sdefaultcol = document.getElementById("sdefaultcolor");
+let saveco = document.getElementById("savecolor");
 if (window.navigator.language != "zh-TW"){
+    nameta.innerHTML = "Name";
+    colorta.innerHTML = "Color";
     titlew.innerHTML = "Settings";
     htmltitle.innerHTML = "Settings";
-    ifud.innerHTML = "If you want to use the default name, just close this tab.";
+    ifud.innerHTML = "If you want to use the default setting, just close this tab.";
     ente.innerHTML = "Press enter to save.";
-    inputblue.placeholder = "Blue Name";
-    inputred.placeholder = "Red name.";
+    inputblue.placeholder = "Up's Name";
+    inputred.placeholder = "Down's name.";
     defaultbtn.innerHTML = "Restore default name";
     viewbtn.innerHTML = "View new tab";
+    goviewco.innerHTML = "View new tab";
+    sdefaultcol.innerHTML = "Restore default color";
+    saveco.innerHTML = "Save color";
 }
 viewbtn.onclick = function(){
+    chrome.tabs.create({url: "chrome://newtab"});
+}
+goviewco.onclick = function(){
     chrome.tabs.create({url: "chrome://newtab"});
 }
 defaultbtn.onclick = function(){
