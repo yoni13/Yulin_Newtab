@@ -4,6 +4,30 @@ if (window.navigator.language != "zh-TW") {
   document.getElementById("redneon").innerText = 'Milody'
   document.getElementById("htmltitle").innerText = 'New Tab'
 }
+chrome.storage.sync.get("color_vla", function(items) {
+  console.log(items);
+  var color_vla = items.color_vla;
+if (color_vla == 1) {
+chrome.storage.sync.get("bluecolor", function(items) {
+    console.log(items);
+});
+}
+if (color_vla == 2) {
+chrome.storage.sync.get("redcolor", function(items) {
+    console.log(items);
+});
+}
+if (color_vla == 3) {
+chrome.storage.sync.get("bluecolor", function(items) {
+    console.log(items);
+});
+chrome.storage.sync.get("redcolor", function(items) { 
+    console.log(items);
+});
+}
+}
+);
+
 chrome.storage.sync.get("name_vla", function(items) {
     console.log(items);
     var name_vla = items.name_vla;
