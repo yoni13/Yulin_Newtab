@@ -13,6 +13,12 @@ chrome.runtime.onInstalled.addListener(async () => {
         chrome.storage.sync.set({name_vla: 0});
       }
   });
+  chrome.storage.sync.get("color_vla", function(items) {
+    console.log(items.name_vla);
+    if (items.color_vla == undefined) {
+      chrome.storage.sync.set({color_vla: 0});
+    }
+});
     let url = chrome.runtime.getURL("public/setting.html");
     let tab = await chrome.tabs.create({ url });
   });

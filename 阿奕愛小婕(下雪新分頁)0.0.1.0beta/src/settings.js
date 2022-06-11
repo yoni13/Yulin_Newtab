@@ -32,6 +32,14 @@ viewbtn.onclick = function(){
 goviewco.onclick = function(){
     chrome.tabs.create({url: "chrome://newtab"});
 }
+sdefaultcol.onclick = function(){
+    chrome.storage.sync.set({name_vla:0}, function() {});
+    if (window.navigator.language == "zh-TW"){
+    alert("已恢復預設值");}
+    else{
+        alert('Default color restored');}
+    location.reload();
+}
 defaultbtn.onclick = function(){
     chrome.storage.sync.set({name_vla:0}, function() {});
     if (window.navigator.language == "zh-TW"){
