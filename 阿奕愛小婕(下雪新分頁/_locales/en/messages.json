@@ -1,6 +1,9 @@
 {
-    "appName": {
-      "message": "Yuln loves Meldy(New Tab)",
-      "description": "Snow with romantic neon lights to make your new tab even better."
+    "appTitle": {
+        "message": "Yulin New Tab"
+    },
+    "appDesc": {
+        "message": "Snow with romantic neon lights to make your new tab even better.",
+        "description":"Yulin New Tab is a new tab addon, including snow animation, neon light effects, etc."
     }
   }

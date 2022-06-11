@@ -6,18 +6,62 @@ let titlew= document.getElementById("title");
 let htmltitle= document.getElementById("settingw");
 let ifud= document.getElementById("ifu");
 let ente= document.getElementById("prenter");
+let nameta= document.getElementById("nametab");
+let colorta= document.getElementById("colortab");
+let goviewco= document.getElementById("goviewcolor");
+let sdefaultcol = document.getElementById("sdefaultcolor");
+let saveco = document.getElementById("savecolor");
 if (window.navigator.language != "zh-TW"){
+    nameta.innerHTML = "Name";
+    colorta.innerHTML = "Color";
     titlew.innerHTML = "Settings";
     htmltitle.innerHTML = "Settings";
-    ifud.innerHTML = "If you want to use the default name, just close this tab.";
+    ifud.innerHTML = "If you want to use the default setting, just close this tab.";
     ente.innerHTML = "Press enter to save.";
-    inputblue.placeholder = "Blue Name";
-    inputred.placeholder = "Red name.";
+    inputblue.placeholder = "Up's Name";
+    inputred.placeholder = "Down's name.";
     defaultbtn.innerHTML = "Restore default name";
     viewbtn.innerHTML = "View new tab";
+    goviewco.innerHTML = "View new tab";
+    sdefaultcol.innerHTML = "Restore default color";
+    saveco.innerHTML = "Save color";
+}
+chrome.storage.sync.get("color_vla", function(items) {
+    if (items.color_vla == 1) {
+        chrome.storage.sync.get("color_bluehex", function(items) {
+            document.getElementById("bluec").value = items.color_bluehex;
+        });
+        chrome.storage.sync.get("color_redhex", function(items) {
+            document.getElementById("redc").value = items.color_redhex;
+        });
+    }
+});
+saveco.onclick = function(){
+    var bluecolor = document.getElementById("bluec").value;
+    var redcolor = document.getElementById("redc").value;
+    chrome.storage.sync.set({color_vla:1}, function() {});
+    chrome.storage.sync.set({color_bluehex:bluecolor}, function() {});
+    chrome.storage.sync.set({color_redhex:redcolor}, function() {});
+    if (window.navigator.language != "zh-TW"){
+        alert("Save color successfully!");
+    }
+    else{
+        alert("儲存成功!");
+    }
 }
 viewbtn.onclick = function(){
     chrome.tabs.create({url: "chrome://newtab"});
+}
+goviewco.onclick = function(){
+    chrome.tabs.create({url: "chrome://newtab"});
+}
+sdefaultcol.onclick = function(){
+    chrome.storage.sync.set({color_vla:0}, function() {});
+    if (window.navigator.language == "zh-TW"){
+    alert("已恢復預設值");}
+    else{
+        alert('Default color restored');}
+    location.reload();
 }
 defaultbtn.onclick = function(){
     chrome.storage.sync.set({name_vla:0}, function() {});
