@@ -11,6 +11,9 @@ if (color_vla == 1) {
   chrome.storage.sync.get("color_bluehex", function(items) {
   document.getElementById("blueneon").style.textShadow = '0 0 5px ' +  items.color_bluehex +',0 0 10px '+ items.color_bluehex + ',0 0 20px '+  items.color_bluehex + ',0 0 40px' + items.color_bluehex;
   });
+  chrome.storage.sync.get("color_yellowhex", function(items) {
+    document.getElementById("loves").style.textShadow = '0 0 5px ' +  items.color_yellowhex +',0 0 10px '+ items.color_yellowhex + ',0 0 20px '+  items.color_yellowhex + ',0 0 40px' + items.color_yellowhex;
+  });
   chrome.storage.sync.get("color_redhex", function(items) {
   document.getElementById("redneon").style.textShadow = '0 0 5px ' +  items.color_redhex +',0 0 10px '+ items.color_redhex + ',0 0 20px '+  items.color_redhex + ',0 0 40px' + items.color_redhex;
   });
