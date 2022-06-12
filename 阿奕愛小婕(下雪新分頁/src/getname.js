@@ -1,9 +1,7 @@
-if (window.navigator.language != "zh-TW") {
-  document.getElementById("loves").innerText = 'LOVES'
-  document.getElementById("blueneon").innerText = 'Weley'
-  document.getElementById("redneon").innerText = 'Milody'
-  document.getElementById("htmltitle").innerText = 'New Tab'
-}
+document.getElementById("loves").innerText = chrome.i18n.getMessage('loves');
+document.getElementById("blueneon").innerText = chrome.i18n.getMessage('blue');
+document.getElementById("redneon").innerText = chrome.i18n.getMessage('red');
+document.getElementById("htmltitle").innerText = chrome.i18n.getMessage('newtab');
 chrome.storage.sync.get("color_vla", function(items) {
   console.log(items);
   var color_vla = items.color_vla;

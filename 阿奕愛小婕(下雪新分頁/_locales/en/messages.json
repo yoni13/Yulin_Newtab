@@ -53,5 +53,17 @@
     },
     "rednamesaved":{
         "message":"Down's name saved"
+    },
+    "red":{
+        "message":"Milody"
+    },
+    "blue":{
+        "message":"Weley"
+    },
+    "newtab":{
+        "message":"New tab"
+    },
+    "loves":{
+        "message":"LOVES"
     }
   }

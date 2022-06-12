@@ -53,5 +53,17 @@
     },
     "rednamesaved":{
         "message":"下方設定已儲存"
+    },
+    "red":{
+        "message":"小婕"
+    },
+    "blue":{
+        "message":"阿奕"
+    },
+    "newtab":{
+        "message":"新分頁"
+    },
+    "loves":{
+        "message":"喜歡"
     }
   }
