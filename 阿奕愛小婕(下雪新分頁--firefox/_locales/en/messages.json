@@ -1,6 +1,69 @@
 {
-    "appName": {
-      "message": "Yulin_New Tab",
-      "description": "Snow with romantic neon lights to make your new tab even better."
+    "appTitle": {
+        "message": "Yulin New Tab"
+    },
+    "appDesc": {
+        "message": "Snow with romantic neon lights to make your new tab even better.",
+        "description":"Yulin New Tab is a new tab addon, including snow animation, neon light effects, etc."
+    },
+    "nametab":{
+        "message":"Name"
+    },
+    "colortab":{
+        "message":"Color"
+    },
+    "setting":{
+        "message":"Settings"
+    },
+    "ifud":{
+        "message":"If you want to use the default setting, just close this tab."
+    },
+    "ente":{
+        "message":"Press enter to save."
+    },
+    "inputblue":{
+        "message":"Up's Name"
+    },
+    "inputred":{
+        "message":"Down's Name"
+    },
+    "defaultbtn":{
+        "message":"Restore default name"
+    },
+    "viewbtn":{
+        "message":"View new tab"
+    },
+    "goviewbtn":{
+        "message":"View new tab"
+    },
+    "sdefaultcol":{
+        "message":"Restore default color"
+    },
+    "saveco":{
+        "message":"Save color"
+    },
+    "savecook":{
+        "message":"Save color successfully!"
+    },
+    "savecodefault":{
+        "message":"Default color restored"
+    },
+    "bluenamesaved":{
+        "message":"Up's name saved"
+    },
+    "rednamesaved":{
+        "message":"Down's name saved"
+    },
+    "red":{
+        "message":"Milody"
+    },
+    "blue":{
+        "message":"Weley"
+    },
+    "newtab":{
+        "message":"New tab"
+    },
+    "loves":{
+        "message":"LOVES"
     }
   }

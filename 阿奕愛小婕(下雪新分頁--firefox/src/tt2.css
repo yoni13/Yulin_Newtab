@@ -10,7 +10,7 @@ body{background:#232323;}
   position:absolute;
   left:50%;
   top:50%;
-  transform:translate(-18%,-50%); 
+  transform:translate(-25%,-50%); 
 }
 
 .neon-effect{
@@ -53,7 +53,7 @@ body{background:#232323;}
   color:#232323;}
 }
 #searchbar {
-  transform:translate(-35%,10%); 
+  transform:translate(-30%,10%); 
   font-family: 'Noto Sans TC', sans-serif;
   background-color: white;
   border: 1px;

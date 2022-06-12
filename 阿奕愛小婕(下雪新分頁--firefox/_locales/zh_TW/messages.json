@@ -1,6 +1,69 @@
 {
-    "appName": {
-      "message": "阿奕愛小婕(下雪新分頁)",
-      "description": "下雪配上浪漫的霓虹燈，讓你的新分頁更加美好。"
+    "appTitle": {
+        "message": "阿奕愛小婕(下雪新分頁)"
+    },
+    "appDesc": {
+        "message": "下雪配上浪漫的霓虹燈，讓你的新分頁更加美好。",
+        "description":"阿奕愛小婕(下雪新分頁是一個新的分頁模組，包含了下雪動畫、霓虹燈特效等"
+    },
+    "nametab":{
+        "message":"人名"
+    },
+    "colortab":{
+        "message":"顏色"
+    },
+    "setting":{
+        "message":"自定義設定"
+    },
+    "ifud":{
+        "message":"如果您不進行設定，將會使用預設值"
+    },
+    "ente":{
+        "message":"按Enter以確認"
+    },
+    "inputblue":{
+        "message":"上"
+    },
+    "inputred":{
+        "message":"下"
+    },
+    "defaultbtn":{
+        "message":"恢復預設值"
+    },
+    "viewbtn":{
+        "message":"查看"
+    },
+    "goviewbtn":{
+        "message":"查看"
+    },
+    "sdefaultcol":{
+        "message":"恢復預設值"
+    },
+    "saveco":{
+        "message":"儲存"
+    },
+    "savecook":{
+        "message":"儲存成功!"
+    },
+    "savecodefault":{
+        "message":"已恢復預設值"
+    },
+    "bluenamesaved":{
+        "message":"上方設定已儲存"
+    },
+    "rednamesaved":{
+        "message":"下方設定已儲存"
+    },
+    "red":{
+        "message":"小婕"
+    },
+    "blue":{
+        "message":"阿奕"
+    },
+    "newtab":{
+        "message":"新分頁"
+    },
+    "loves":{
+        "message":"喜歡"
     }
   }
