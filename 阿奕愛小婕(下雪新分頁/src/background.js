@@ -6,6 +6,8 @@
 // color_vla = 1 changed
 // color_vla = 0 default
 
+// love_vla = 1 changed
+// love_vla = 0 default
 
 
 chrome.runtime.onInstalled.addListener(async () => {
@@ -20,6 +22,12 @@ chrome.runtime.onInstalled.addListener(async () => {
     if (items.color_vla == undefined) {
       chrome.storage.sync.set({color_vla: 0});
     }
+});
+chrome.storage.sync.get("love_vla", function(items) {
+  console.log(items.love_vla);
+  if (items.love_vla == undefined) {
+    chrome.storage.sync.set({love_vla: 0});
+  }
 });
     let url = chrome.runtime.getURL("public/setting.html");
     let tab = await chrome.tabs.create({ url });

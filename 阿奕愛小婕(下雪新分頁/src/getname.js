@@ -19,6 +19,7 @@ if (color_vla == 1) {
 }
 );
 
+
 chrome.storage.sync.get("name_vla", function(items) {
     console.log(items);
     var name_vla = items.name_vla;
@@ -49,5 +50,17 @@ chrome.storage.sync.get("redkey", function(items) {
       document.getElementById("redneon").innerText = items.redkey;
   });
 }
-}
-);
+})
+
+chrome.storage.sync.get("love_vla", function(items) {
+  var love_vla = items.love_vla;
+  if (love_vla == 1) {
+    chrome.storage.sync.get("middlekey", function(items) {
+      console.log(items.middlekey);
+    document.getElementById('loves').innerHTML = items.middlekey;
+    });
+  }
+  else {
+    document.getElementById('loves').innerHTML = chrome.i18n.getMessage('loves');
+  }
+})

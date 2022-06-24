@@ -20,6 +20,16 @@ body{
     text-align: center;
     margin-top: 20px;
 }
+#middle{
+    background-color: black;
+    border-radius: 90px;
+    color: white;
+    height:70px;
+    width:500px;
+    font-size:14pt;
+    text-align: center;
+    margin-top: 20px;
+}
 #red{
     background-color: black;
     border-radius: 90px;

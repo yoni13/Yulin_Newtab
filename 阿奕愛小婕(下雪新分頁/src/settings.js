@@ -11,6 +11,7 @@ let colorta= document.getElementById("colortab");
 let goviewco= document.getElementById("goviewcolor");
 let sdefaultcol = document.getElementById("sdefaultcolor");
 let saveco = document.getElementById("savecolor");
+let middle = document.getElementById("middle");
 nameta.innerHTML = chrome.i18n.getMessage('nametab');
 colorta.innerHTML = chrome.i18n.getMessage('colortab');
 titlew.innerHTML = chrome.i18n.getMessage("setting");
@@ -24,6 +25,27 @@ viewbtn.innerHTML = chrome.i18n.getMessage('viewbtn');
 goviewco.innerHTML = chrome.i18n.getMessage('goviewbtn');
 sdefaultcol.innerHTML = chrome.i18n.getMessage('sdefaultcol');
 saveco.innerHTML = chrome.i18n.getMessage('saveco');
+middle.placeholder = chrome.i18n.getMessage('middle');
+middle.value = chrome.i18n.getMessage('love');
+
+if (window.location.href.endsWith("#name")) {
+    openCity(event, 'name')
+}
+if (window.location.href.endsWith("#color")) {
+    openCity(event, 'color')
+}
+
+
+function reloadurl(hashtag) {
+    if (hashtag == '#name') {
+        nothashtag = '#color';
+    }
+    if (hashtag == '#color') {
+        nothashtag = '#name';
+    }
+    var target = chrome.runtime.getURL("public/setting.html") + hashtag;
+    window.location.replace(target);
+}
 chrome.storage.sync.get("color_vla", function(items) {
     if (items.color_vla == 1) {
         chrome.storage.sync.get("color_bluehex", function(items) {
@@ -43,6 +65,7 @@ saveco.onclick = function(){
     chrome.storage.sync.set({color_yellowhex:yellowcolor}, function() {});
     chrome.storage.sync.set({color_redhex:redcolor}, function() {});
     alert(chrome.i18n.getMessage('savecook'));
+    reloadurl('#color');
 }
 viewbtn.onclick = function(){
     chrome.tabs.create({url: "chrome://newtab"});
@@ -53,12 +76,13 @@ goviewco.onclick = function(){
 sdefaultcol.onclick = function(){
     chrome.storage.sync.set({color_vla:0}, function() {});
     alert(chrome.i18n.getMessage('savecodefault'));
-    location.reload();
+    reloadurl('#color');
 }
 defaultbtn.onclick = function(){
+    chrome.storage.sync.set({love_vla:0}, function() {});
     chrome.storage.sync.set({name_vla:0}, function() {});
     alert(chrome.i18n.getMessage('savecodefault'));
-    location.reload();
+    reloadurl('#name');
     }
 chrome.storage.sync.get("name_vla", function(items) {
       console.log(items);
@@ -78,7 +102,7 @@ inputblue.onkeyup = function (e) {
             chrome.storage.sync.set({name_vla:3}, function() {})
         }
         alert(chrome.i18n.getMessage('bluenamesaved'));  
-        location.reload();
+        reloadurl('#name');
         
     });
 };
@@ -96,9 +120,27 @@ inputred.onkeyup = function (e) {
             chrome.storage.sync.set({name_vla:3}, function() {})
         }
         alert(chrome.i18n.getMessage('rednamesaved'));
-        location.reload();
+        reloadurl('#name');
       });
 };
 };
 }
 );
+
+middle.onkeyup = function (e) {
+    if (e.key === 'Enter') {
+
+
+    if (middle.value != "") {
+    event.preventDefault();
+    chrome.storage.sync.set({middlekey: middle.value}, function() {
+        console.log('Value is set to ' + middle.value);
+        middle.value = "";
+        alert(chrome.i18n.getMessage('middlenamesaved'));
+        reloadurl('#name');
+      });
+      chrome.storage.sync.set({love_vla: 1}, function() {})
+    }
+};
+};
+
