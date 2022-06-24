@@ -44,7 +44,7 @@ function reloadurl(hashtag) {
         nothashtag = '#name';
     }
     var target = chrome.runtime.getURL("public/setting.html") + hashtag;
-    window.location.replace(target);
+    location.href = target;
 }
 chrome.storage.sync.get("color_vla", function(items) {
     if (items.color_vla == 1) {
