@@ -28,20 +28,20 @@ saveco.innerHTML = chrome.i18n.getMessage('saveco');
 middle.placeholder = chrome.i18n.getMessage('middle');
 middle.value = chrome.i18n.getMessage('love');
 
-if (window.location.href.endsWith("#name")) {
-    openCity(event, 'name')
+if (window.location.href.endsWith("?name")) {
+    openCity(event,'name')
 }
-if (window.location.href.endsWith("#color")) {
-    openCity(event, 'color')
+if (window.location.href.endsWith("?color")) {
+    openCity(event,'color')
 }
 
 
 function reloadurl(hashtag) {
-    if (hashtag == '#name') {
-        nothashtag = '#color';
+    if (hashtag == '?name') {
+        nothashtag = '?color';
     }
-    if (hashtag == '#color') {
-        nothashtag = '#name';
+    if (hashtag == '?color') {
+        nothashtag = '?name';
     }
     var target = chrome.runtime.getURL("public/setting.html") + hashtag;
     location.href = target;
@@ -65,24 +65,24 @@ saveco.onclick = function(){
     chrome.storage.sync.set({color_yellowhex:yellowcolor}, function() {});
     chrome.storage.sync.set({color_redhex:redcolor}, function() {});
     alert(chrome.i18n.getMessage('savecook'));
-    reloadurl('#color');
+    reloadurl('?color');
 }
 viewbtn.onclick = function(){
-    chrome.tabs.create({url: "chrome://newtab"});
+    chrome.tabs.create({url: chrome.runtime.getURL("public/index.html")});
 }
 goviewco.onclick = function(){
-    chrome.tabs.create({url: "chrome://newtab"});
+    chrome.tabs.create({url: chrome.runtime.getURL("public/index.html")});
 }
 sdefaultcol.onclick = function(){
     chrome.storage.sync.set({color_vla:0}, function() {});
     alert(chrome.i18n.getMessage('savecodefault'));
-    reloadurl('#color');
+    reloadurl('?color');
 }
 defaultbtn.onclick = function(){
     chrome.storage.sync.set({love_vla:0}, function() {});
     chrome.storage.sync.set({name_vla:0}, function() {});
     alert(chrome.i18n.getMessage('savecodefault'));
-    reloadurl('#name');
+    reloadurl('?name');
     }
 chrome.storage.sync.get("name_vla", function(items) {
       console.log(items);
@@ -102,7 +102,7 @@ inputblue.onkeyup = function (e) {
             chrome.storage.sync.set({name_vla:3}, function() {})
         }
         alert(chrome.i18n.getMessage('bluenamesaved'));  
-        reloadurl('#name');
+        reloadurl('?name');
         
     });
 };
@@ -120,7 +120,7 @@ inputred.onkeyup = function (e) {
             chrome.storage.sync.set({name_vla:3}, function() {})
         }
         alert(chrome.i18n.getMessage('rednamesaved'));
-        reloadurl('#name');
+        reloadurl('?name');
       });
 };
 };
@@ -137,7 +137,7 @@ middle.onkeyup = function (e) {
         console.log('Value is set to ' + middle.value);
         middle.value = "";
         alert(chrome.i18n.getMessage('middlenamesaved'));
-        reloadurl('#name');
+        reloadurl('?name');
       });
       chrome.storage.sync.set({love_vla: 1}, function() {})
     }

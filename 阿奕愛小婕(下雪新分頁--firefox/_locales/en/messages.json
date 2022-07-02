@@ -54,11 +54,17 @@
     "rednamesaved":{
         "message":"Down's name saved"
     },
+    "middlenamesaved":{
+        "message":"Middle's name saved"
+    },
     "red":{
         "message":"Milody"
     },
     "blue":{
         "message":"Weley"
+    },
+    "middle":{
+        "message":"Middle"
     },
     "newtab":{
         "message":"New tab"

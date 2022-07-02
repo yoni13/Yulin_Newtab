@@ -2,7 +2,6 @@ document.getElementById("loves").innerText = chrome.i18n.getMessage('loves');
 document.getElementById("blueneon").innerText = chrome.i18n.getMessage('blue');
 document.getElementById("redneon").innerText = chrome.i18n.getMessage('red');
 document.getElementById("htmltitle").innerText = chrome.i18n.getMessage('newtab');
-
 chrome.storage.sync.get("color_vla", function(items) {
   console.log(items);
   var color_vla = items.color_vla;
@@ -19,6 +18,7 @@ if (color_vla == 1) {
 }
 }
 );
+
 
 chrome.storage.sync.get("name_vla", function(items) {
     console.log(items);
@@ -50,5 +50,17 @@ chrome.storage.sync.get("redkey", function(items) {
       document.getElementById("redneon").innerText = items.redkey;
   });
 }
-}
-);
+})
+
+chrome.storage.sync.get("love_vla", function(items) {
+  var love_vla = items.love_vla;
+  if (love_vla == 1) {
+    chrome.storage.sync.get("middlekey", function(items) {
+      console.log(items.middlekey);
+    document.getElementById('loves').innerHTML = items.middlekey;
+    });
+  }
+  else {
+    document.getElementById('loves').innerHTML = chrome.i18n.getMessage('loves');
+  }
+})
