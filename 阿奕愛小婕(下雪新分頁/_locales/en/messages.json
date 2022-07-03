@@ -71,5 +71,8 @@
     },
     "loves":{
         "message":"LOVES"
+    },
+    "weathertab":{
+        "message":"Weather"
     }
   }

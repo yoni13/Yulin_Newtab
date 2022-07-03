@@ -87,3 +87,29 @@ body{background:#232323;}
   color: white;
   font-family: 'Noto Sans TC', sans-serif;
 }
+.weather{
+  position:absolute;
+  top:1px;
+  transform:translate(0%,10%); 
+  font-family: 'Noto Sans TC', sans-serif !important;
+  color: white;
+}
+#city{
+  display:inline;
+  position: absolute;
+  top: 10;
+  letter-spacing: 2;
+  font-size:18px;
+  font-family: 'Noto Sans TC', sans-serif !important;
+  color: white;
+}
+#temp{
+  transform:translate(200%,0%); 
+  display:inline;
+  position: absolute;
+  top: 10;
+  letter-spacing: 2;
+  font-size:18px;
+  font-family: 'Noto Sans TC', sans-serif !important;
+  color: white;
+}

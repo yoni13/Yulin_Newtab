@@ -71,5 +71,8 @@
     },
     "loves":{
         "message":"喜歡"
+    },
+    "weathertab":{
+        "message":"天氣"
     }
   }
