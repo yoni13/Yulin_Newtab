@@ -8,18 +8,24 @@ let ifud= document.getElementById("ifu");
 let ente= document.getElementById("prenter");
 let nameta= document.getElementById("nametab");
 let colorta= document.getElementById("colortab");
+let weatherta = document.getElementById("weathertab");
 let goviewco= document.getElementById("goviewcolor");
 let sdefaultcol = document.getElementById("sdefaultcolor");
 let saveco = document.getElementById("savecolor");
 let middle = document.getElementById("middle");
+let weather = document.getElementById("weatherinput");
+let weatherbtn = document.getElementById("weatherbtn");
+weatherbtn.innerHTML = chrome.i18n.getMessage('weatherbtn');
 nameta.innerHTML = chrome.i18n.getMessage('nametab');
 colorta.innerHTML = chrome.i18n.getMessage('colortab');
+weatherta.innerHTML = chrome.i18n.getMessage('weathertab');
 titlew.innerHTML = chrome.i18n.getMessage("setting");
 htmltitle.innerHTML = chrome.i18n.getMessage('setting');
 ifud.innerHTML = chrome.i18n.getMessage('ifud');
 ente.innerHTML = chrome.i18n.getMessage('ente');
 inputblue.placeholder = chrome.i18n.getMessage('inputblue');
 inputred.placeholder = chrome.i18n.getMessage('inputred');
+weather.placeholder = chrome.i18n.getMessage('location');
 defaultbtn.innerHTML = chrome.i18n.getMessage('defaultbtn');
 viewbtn.innerHTML = chrome.i18n.getMessage('viewbtn');
 goviewco.innerHTML = chrome.i18n.getMessage('goviewbtn');
@@ -34,15 +40,11 @@ if (window.location.href.endsWith("?name")) {
 if (window.location.href.endsWith("?color")) {
     openCity(event,'color')
 }
-
+if (window.location.href.endsWith("?weather")) {
+    openCity(event,'weather')
+}
 
 function reloadurl(hashtag) {
-    if (hashtag == '?name') {
-        nothashtag = '?color';
-    }
-    if (hashtag == '?color') {
-        nothashtag = '?name';
-    }
     var target = chrome.runtime.getURL("public/setting.html") + hashtag;
     location.href = target;
 }
@@ -144,3 +146,29 @@ middle.onkeyup = function (e) {
 };
 };
 
+weather.onkeyup = function (e) {
+    if (e.key === 'Enter') {
+    event.preventDefault();
+    var inputweather = weather.value;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${inputweather}&appid=1dfbbb073a087c7dd3a5f086202ba946&units=metric`).then(function(response) {
+    if (response.status != 200) {
+        alert(chrome.i18n.getMessage('weathererror'));
+    }
+    else{
+    chrome.storage.sync.set({weather_city: inputweather}, function() {
+        chrome.storage.sync.set({weather_vla: 1}, function() {})
+        console.log('Value is set to ' + inputweather);
+        weather.value = "";
+        alert(chrome.i18n.getMessage('weathersaved'));
+        reloadurl('?weather');
+      });
+    }
+})
+    }
+ }
+
+
+weatherbtn.onclick = function(){
+    chrome.storage.sync.set({weather_vla: 0}, function() {})
+    alert(chrome.i18n.getMessage('weatherdeleted'));
+}

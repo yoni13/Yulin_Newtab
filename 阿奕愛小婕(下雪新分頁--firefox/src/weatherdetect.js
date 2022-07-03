@@ -21,6 +21,10 @@ function getweather(city){
 
 chrome.storage.sync.get("weather_vla", function(items) {
 var weather_vla = items.weather_vla;
+if (items.weather_vla == undefined){
+    chrome.storage.sync.set({weather_vla: 0});
+    location.reload();
+}
 if (weather_vla == 0) {
 // No custom weather location
 // Get Location from IP

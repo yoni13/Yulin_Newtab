@@ -10,10 +10,11 @@ body{background:#232323;}
   position:absolute;
   left:50%;
   top:50%;
-  transform:translate(-25%,-50%); 
+  transform:translate(-18%,-50%); 
 }
 
 .neon-effect{
+
   color:#fff;
   letter-spacing:2px;
 }
@@ -53,7 +54,7 @@ body{background:#232323;}
   color:#232323;}
 }
 #searchbar {
-  transform:translate(-30%,10%); 
+  transform:translate(-35%,10%); 
   font-family: 'Noto Sans TC', sans-serif;
   background-color: white;
   border: 1px;
@@ -85,4 +86,30 @@ body{background:#232323;}
 #loadword{
   color: white;
   font-family: 'Noto Sans TC', sans-serif;
+}
+.weather{
+  position:absolute;
+  top:1px;
+  transform:translate(0%,10%); 
+  font-family: 'Noto Sans TC', sans-serif !important;
+  color: white;
+}
+#city{
+  display:inline;
+  position: absolute;
+  top: 10;
+  letter-spacing: 2;
+  font-size:18px;
+  font-family: 'Noto Sans TC', sans-serif !important;
+  color: white;
+}
+#temp{
+  transform:translate(200%,0%); 
+  display:inline;
+  position: absolute;
+  top: 10;
+  letter-spacing: 2;
+  font-size:18px;
+  font-family: 'Noto Sans TC', sans-serif !important;
+  color: white;
 }

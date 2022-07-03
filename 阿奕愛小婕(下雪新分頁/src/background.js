@@ -9,6 +9,8 @@
 // love_vla = 1 changed
 // love_vla = 0 default
 
+//weather_vla = 1 changed
+//weather_vla = 0 default
 
 chrome.runtime.onInstalled.addListener(async () => {
   chrome.storage.sync.get("name_vla", function(items) {
@@ -17,6 +19,12 @@ chrome.runtime.onInstalled.addListener(async () => {
         chrome.storage.sync.set({name_vla: 0});
       }
   });
+  chrome.storage.sync.get("weather_vla", function(items) {
+    console.log(items.weather_vla);
+    if (items.name_vla == undefined) {
+      chrome.storage.sync.set({weather_vla: 0});
+    }
+});
   chrome.storage.sync.get("color_vla", function(items) {
     console.log(items.name_vla);
     if (items.color_vla == undefined) {

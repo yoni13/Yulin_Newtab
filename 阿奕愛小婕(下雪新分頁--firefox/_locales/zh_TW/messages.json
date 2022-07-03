@@ -57,6 +57,9 @@
     "middlenamesaved":{
         "message":"中間設定已儲存"
     },
+    "weathersaved":{
+        "message":"天氣設定已儲存"
+    },
     "red":{
         "message":"小婕"
     },
@@ -71,5 +74,20 @@
     },
     "loves":{
         "message":"喜歡"
+    },
+    "weathertab":{
+        "message":"天氣"
+    },
+    "location":{
+        "message":"地點"
+    },
+    "weathererror":{
+        "message":"請輸入正確的地點或稍後再試"
+    },
+    "weatherbtn":{
+        "message":"恢復預設值"
+    },
+    "weatherdeleted":{
+        "message":"已恢復預設值"
     }
   }

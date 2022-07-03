@@ -57,6 +57,9 @@
     "middlenamesaved":{
         "message":"Middle's name saved"
     },
+    "weathersaved":{
+        "message":"Weather saved"
+    },
     "red":{
         "message":"Milody"
     },
@@ -71,5 +74,20 @@
     },
     "loves":{
         "message":"LOVES"
+    },
+    "weathertab":{
+        "message":"Weather"
+    },
+    "location":{
+        "message":"Location"
+    },
+    "weathererror":{
+        "message":"Error Occurred, Please try again later Or correct your spelling."
+    },
+    "weatherbtn":{
+        "message":"Reset"
+    },
+    "weatherdeleted":{
+        "message":"Weather Reseted"
     }
   }
