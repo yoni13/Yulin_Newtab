@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta content='width=device-width, initial-scale=1' name='viewport'/>
+    <meta charset="UTF-8">
+    <title id="settingw"></title>
+    <link rel="stylesheet" href="../src/setting.css">
+    <link rel="stylesheet" href="../src/tabs.css">
+    <script src="../src/tabs.js"></script>
+    
+</head>
+<body>
+<div id="title"></div>
+<h2 id="ifu"></h2>
+<div class="tab">
+    <button class="tablinks" id="nametab"></button>
+    <button class="tablinks" id="colortab"></button>
+    <button class="tablinks" id="weathertab"></button>
+    <script src="../src/settab.js"></script>
+</div>
+<!-- setting of names -->
+<div id="name" class="tabcontent">
+<input id="blue" type="text" placeholder="">
+<br>
+<input id="middle" type="text" placeholder="">
+<br>
+<input id="red" type="text" placeholder="">
+<h1 id="prenter"></h1>
+<button id="sdefault"></button>&nbsp&nbsp&nbsp
+<button id="goview"></button>
+</div>
+<!-- setting of colors -->
+<div id="color" class="tabcontent">
+<div class="colorpick">
+<input id="bluec" type="color" value="#43e8d8">
+</div>
+<br><br>
+<div class="colorpick">
+    <input id="yellowc" type="color" value="#f7f529">
+</div>
+<br><br>
+<div class="colorpick">
+<input id="redc" type="color" value="#ff4141">
+</div>
+<button id="savecolor"></button>
+<br>
+<button id="sdefaultcolor"></button>&nbsp&nbsp&nbsp
+<button id="goviewcolor"></button>
+</div>
+</div>
+<!-- setting of weathers -->
+<div id="weather" class="tabcontent">
+<input id="weatherinput" type="text" placeholder="">
+<h1 id="prenter">按Enter以確認</h1>
+<button id="weatherbtn"></button>
+</div>
+<script src="../src/settings.js"></script>
+</body>
+</html>
