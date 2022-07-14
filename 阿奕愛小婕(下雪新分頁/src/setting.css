@@ -143,3 +143,10 @@ input[type='color'] {
     text-align: center;
     margin-top: 20px;
 }
+#showprovider{
+    padding-left: 50px;
+    color: white;
+    font-size: 9px;
+    font-weight: bold;
+    margin-top: 20px;
+}

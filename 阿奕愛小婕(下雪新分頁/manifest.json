@@ -1,8 +1,8 @@
 {
   "manifest_version": 3,
-  "name": "阿奕愛小婕(下雪新分頁",
-  "description": "下雪配上浪漫的霓虹燈，讓你的新分頁更加美好。",
-  "version": "0.0.1.5",
+  "name": "__MSG_name__",
+  "description": "__MSG_desc__",
+  "version": "0.0.1.6",
   "permissions": [
     "storage"
   ],

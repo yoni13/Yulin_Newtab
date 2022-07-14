@@ -1,11 +1,11 @@
 {
-    "appTitle": {
+    "description": {
+        "message": "Snow with romantic neon lights to make your new tab even better"
+    },
+    "name": {
         "message": "Yulin New Tab"
     },
-    "appName": {
-        "message": "Yulin New Tab"
-    },
-    "appDesc": {
+    "desc": {
         "message": "Snow with romantic neon lights to make your new tab even better.",
         "description":"Yulin New Tab is a new tab addon, including snow animation, neon light effects, etc."
     },
@@ -92,5 +92,8 @@
     },
     "weatherdeleted":{
         "message":"Weather Reseted"
+    },
+    "showprovider":{
+        "message":"Weather Services Provider:OpenWeatherMap"
     }
   }

@@ -15,6 +15,8 @@ let saveco = document.getElementById("savecolor");
 let middle = document.getElementById("middle");
 let weather = document.getElementById("weatherinput");
 let weatherbtn = document.getElementById("weatherbtn");
+let ente2 = document.getElementById("prenter2");
+let showprovide = document.getElementById("showprovider");
 weatherbtn.innerHTML = chrome.i18n.getMessage('weatherbtn');
 nameta.innerHTML = chrome.i18n.getMessage('nametab');
 colorta.innerHTML = chrome.i18n.getMessage('colortab');
@@ -33,7 +35,8 @@ sdefaultcol.innerHTML = chrome.i18n.getMessage('sdefaultcol');
 saveco.innerHTML = chrome.i18n.getMessage('saveco');
 middle.placeholder = chrome.i18n.getMessage('middle');
 middle.value = chrome.i18n.getMessage('love');
-
+ente2.innerHTML = chrome.i18n.getMessage('ente');
+showprovide.innerHTML = chrome.i18n.getMessage('showprovider');
 if (window.location.href.endsWith("?name")) {
     openCity(event,'name')
 }
