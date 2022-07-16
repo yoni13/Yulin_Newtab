@@ -1,0 +1,1 @@
+0.0.1.7:fix if you open the main page in no internet status,u will display a "cannot reach" in weather section
