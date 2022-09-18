@@ -150,3 +150,13 @@ input[type='color'] {
     font-weight: bold;
     margin-top: 20px;
 }
+#searchinput{
+    background-color: black;
+    border-radius: 90px;
+    color: white;
+    height:70px;
+    width:500px;
+    font-size:14pt;
+    text-align: center;
+    margin-top: 20px;
+}

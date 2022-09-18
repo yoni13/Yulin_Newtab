@@ -12,6 +12,11 @@
 //weather_vla = 1 changed
 //weather_vla = 0 default
 
+//search_vla = 1 changed
+//search_vla = 0 default
+
+//love_vla = 1 logined
+//love_vla = 0 default
 chrome.runtime.onInstalled.addListener(async () => {
   chrome.storage.sync.get("name_vla", function(items) {
       console.log(items.name_vla);

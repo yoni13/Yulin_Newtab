@@ -95,5 +95,8 @@
     },
     "showprovider":{
         "message":"Weather Services Provider:OpenWeatherMap"
+    },
+    "searchtab":{
+        "message":"Search Provider"
     }
   }

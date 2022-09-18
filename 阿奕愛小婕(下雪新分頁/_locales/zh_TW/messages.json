@@ -95,5 +95,8 @@
     },
     "showprovider":{
         "message":"天氣服務提供者:OpenWeatherMap"
+    },
+    "searchtab":{
+        "message":"搜尋引擎提供者"
     }
   }

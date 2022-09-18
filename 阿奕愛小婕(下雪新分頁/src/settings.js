@@ -16,7 +16,11 @@ let middle = document.getElementById("middle");
 let weather = document.getElementById("weatherinput");
 let weatherbtn = document.getElementById("weatherbtn");
 let ente2 = document.getElementById("prenter2");
+let ente3 = document.getElementById("prenter3");
 let showprovide = document.getElementById("showprovider");
+let search = document.getElementById("searchtab");
+ente3.innerHTML = chrome.i18n.getMessage('ente');
+search.innerHTML = chrome.i18n.getMessage('searchtab');
 weatherbtn.innerHTML = chrome.i18n.getMessage('weatherbtn');
 nameta.innerHTML = chrome.i18n.getMessage('nametab');
 colorta.innerHTML = chrome.i18n.getMessage('colortab');
@@ -45,6 +49,9 @@ if (window.location.href.endsWith("?color")) {
 }
 if (window.location.href.endsWith("?weather")) {
     openCity(event,'weather')
+}
+if (window.location.href.endsWith("?search")) {
+    openCity(event,'search')
 }
 
 function reloadurl(hashtag) {
@@ -175,3 +182,5 @@ weatherbtn.onclick = function(){
     chrome.storage.sync.set({weather_vla: 0}, function() {})
     alert(chrome.i18n.getMessage('weatherdeleted'));
 }
+
+document.getElementsByClassName("version")[0].innerHTML = chrome.i18n.getMessage('version') + chrome.runtime.getManifest().version;
