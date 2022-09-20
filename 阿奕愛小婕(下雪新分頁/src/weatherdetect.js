@@ -11,7 +11,7 @@ function getweather(city){
     console.log(weather_desc);
     let weather_icon = data['weather'][0]['icon'];
     console.log(weather_icon);
-    let weather_icon_url = "http://openweathermap.org/img/w/" + weather_icon + ".png";
+    let weather_icon_url = "https://openweathermap.org/img/w/" + weather_icon + ".png";
     document.getElementById("weather_ico").src = weather_icon_url;
     let city = data['name'];
     document.getElementById("city").innerHTML = city;
@@ -24,7 +24,7 @@ var weather_vla = items.weather_vla;
 if (weather_vla == 0) {
 // No custom weather location
 // Get Location from IP
-fetch("http://ip-api.com/json/").then(function (response) {
+fetch("https://ip-api.com/json/").then(function (response) {
     return response.json();
 }).then(function(data) {
     let city = data.city;
