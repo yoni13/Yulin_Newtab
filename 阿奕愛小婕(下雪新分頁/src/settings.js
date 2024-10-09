@@ -19,6 +19,7 @@ let ente2 = document.getElementById("prenter2");
 let ente3 = document.getElementById("prenter3");
 let showprovide = document.getElementById("showprovider");
 let search = document.getElementById("searchtab");
+let searchinput = document.getElementById("searchinput");
 ente3.innerHTML = chrome.i18n.getMessage('ente');
 search.innerHTML = chrome.i18n.getMessage('searchtab');
 weatherbtn.innerHTML = chrome.i18n.getMessage('weatherbtn');
@@ -181,6 +182,18 @@ weather.onkeyup = function (e) {
 weatherbtn.onclick = function(){
     chrome.storage.sync.set({weather_vla: 0}, function() {})
     alert(chrome.i18n.getMessage('weatherdeleted'));
+}
+
+searchinput.onkeyup = function (e) {
+    if (e.key === 'Enter') {
+    event.preventDefault();
+    chrome.storage.sync.set({searchkey: searchinput.value}, function() {
+        console.log('Value is set to ' + searchinput.value);
+        searchinput.value = "";
+        alert(chrome.i18n.getMessage('searchsaved'));
+        reloadurl('?search');
+      });
+};
 }
 
 document.getElementsByClassName("version")[0].innerHTML = chrome.i18n.getMessage('version') + chrome.runtime.getManifest().version;

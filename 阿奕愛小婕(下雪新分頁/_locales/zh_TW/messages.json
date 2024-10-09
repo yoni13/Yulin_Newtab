@@ -98,5 +98,8 @@
     },
     "searchtab":{
         "message":"搜尋引擎提供者"
+    },
+    "searchsaved":{
+        "message":"搜尋引擎已儲存"
     }
   }

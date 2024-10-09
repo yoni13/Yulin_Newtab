@@ -68,7 +68,6 @@ body{background:#232323;}
   background-size: 22px 22px;
   background-repeat: no-repeat;
   background-position: 10px 0.7rem;
-  background-image: url('../assets/img/g.svg');
 }
 #loader {
   border: 16px solid #f3f3f3; /* Light grey */

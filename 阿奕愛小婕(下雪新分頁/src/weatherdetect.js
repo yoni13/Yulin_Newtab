@@ -24,7 +24,7 @@ var weather_vla = items.weather_vla;
 if (weather_vla == 0) {
 // No custom weather location
 // Get Location from IP
-fetch("https://ip-api.com/json/").then(function (response) {
+fetch("http://ip-api.com/json/").then(function (response) {
     return response.json();
 }).then(function(data) {
     let city = data.city;

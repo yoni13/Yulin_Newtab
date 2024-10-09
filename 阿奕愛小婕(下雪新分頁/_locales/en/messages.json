@@ -98,5 +98,8 @@
     },
     "searchtab":{
         "message":"Search Provider"
+    },
+    "searchsaved":{
+        "message":"Search Provider Saved"
     }
   }

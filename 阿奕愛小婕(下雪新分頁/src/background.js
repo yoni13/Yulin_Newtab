@@ -42,6 +42,18 @@ chrome.storage.sync.get("love_vla", function(items) {
     chrome.storage.sync.set({love_vla: 0});
   }
 });
+
+
+chrome.storage.sync.get("searchkey", function(items) {
+
+  if (items.searchkey == undefined) {
+    chrome.storage.sync.set({searchkey: "https://www.google.com/search?q="});
+  }
+}
+);
+
+
+
     let url = chrome.runtime.getURL("public/setting.html");
     let tab = await chrome.tabs.create({ url });
   });
